@@ -407,9 +407,50 @@ FiveBodyHierarchy_Modern/
 
 ---
 
+## Diagrams
+
+### C₂-Symmetric Body Configuration
+
+Initial placement of all five bodies on the x-axis. Bodies 0 & 3 (blue) form one
+symmetric pair at ±A; bodies 1 & 2 (red) form the inner pair at ±B; body 4 (black)
+is fixed at the origin. Arrows show the initial y-velocities derived from the
+energy and angular-momentum constraints.
+
+![Body layout](FiveBody/body_layout.png)
+
+---
+
+### Named Hierarchy States
+
+Schematic of the four named states a configuration can occupy. The gold bar
+highlights the bonded inner pair. Dashed lines connect C₂ mirror partners.
+
+![Hierarchy states](FiveBody/hierarchy_states.png)
+
+---
+
+### Hierarchy-Change Transition Graph
+
+All 12 directed transitions among the four named states. Each arrow is labelled
+with its `hc[]` index as written to the output file (see §6 of the README above).
+
+![Transition graph](FiveBody/transition_graph.png)
+
+---
+
+### Initial Y-Velocities Across the Sample Sweep
+
+Analytically derived initial y-velocities as a function of A for the sample
+parameter sweep (B = 0.25, m₀ = m₁ = m₄ = 1, C₀ = 0.02, E₀ = −0.07).
+Solid lines = continuous curve; filled circles = the 20 sample IC rows.
+
+![IC velocities](FiveBody/ic_velocities.png)
+
+---
+
 ## Legacy Reference
 
 The original FORTRAN/MFC implementation is preserved at
-[ra15-fivebody-hierarchy-legacy](https://github.com/drmshoaib/ra15-fivebody-hierarchy-legacy).
+[ra15-C--fivebody-hierarchy-legacy](https://github.com/drmshoaib/ra15-C--fivebody-hierarchy-legacy).
 That repository includes a detailed README covering the original code's known
 limitations (32-bit only, MFC dependency, F(8) array bug, deprecated I/O).
