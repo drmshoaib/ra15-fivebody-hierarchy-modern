@@ -492,6 +492,40 @@ The shaded green band marks the "safe zone" below the abort threshold.
 
 ---
 
+### Phase Portraits by Hierarchy State
+
+Each body's position–velocity phase space (x vs ẋ, y vs ẏ) for four
+representative initial conditions, coloured by the instantaneous hierarchy
+state at every timestep:
+
+| Colour | State | Condition |
+|--------|-------|-----------|
+| grey   | Undetermined | transition zone |
+| blue   | H12 | outer binary — bodies 0 & 1 paired |
+| orange | H13 | outer binary — bodies 0 & 2 paired |
+| green  | H14 | body 0 innermost; body 1 far out |
+| red    | H23 | body 1 innermost; body 0 far out |
+
+IC1 (A=1.30, B=0.25) visits H12, H13, and H14.
+IC2 (A=5.50, B=0.50) starts in H23 and transitions to the outer binary.
+IC3 (A=5.50, B=2.50) is confined to the outer binary, cycling between H12 and H13.
+IC4 (A=3.00, B=0.25) shows mixed transitions across three states.
+
+![Phase portraits](FiveBody/phase_portraits.png)
+
+---
+
+### Hierarchy Trajectories in (r₁, r₂) Space
+
+The same four trajectories plotted in the (r₁, r₂) plane — distance of body 0
+from centre vs distance of body 1 from centre — overlaid on the colour-coded
+classification region map. The star marks the starting point of each IC.
+Dashed lines are the effective hierarchy boundaries b₁ and b₂.
+
+![Hierarchy trajectories](FiveBody/hierarchy_trajectories.png)
+
+---
+
 ## Legacy Reference
 
 The original FORTRAN/MFC implementation is preserved at
