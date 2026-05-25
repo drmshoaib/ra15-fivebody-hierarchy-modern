@@ -448,6 +448,50 @@ Solid lines = continuous curve; filled circles = the 20 sample IC rows.
 
 ---
 
+### Sample Orbit Trajectories
+
+Numerically integrated orbits for three representative initial conditions
+(A = 0.50, 0.90, 1.20; B = 0.25; T = 6). Solid lines follow bodies 0 & 1;
+dashed lines are their C₂ mirror partners (bodies 3 & 2). Trail intensity
+fades from early (pale) to late (vivid). Open circles = start; diamonds = end.
+
+![Sample orbits](FiveBody/sample_orbit.png)
+
+---
+
+### Hierarchy Classification Map
+
+Every point in (r₁, r₂) space is coloured by the hierarchy state returned
+by `identifyHierarchy()`. The dashed lines mark the effective boundary
+thresholds (b₁ ≈ 5.00, b₂ ≈ 1.74) scaled from `b_default.txt` by 1/|E₀|.
+Purple dots show where the 20 sample ICs start (r₁ = A, r₂ = B = 0.25).
+
+![Hierarchy regions](FiveBody/hierarchy_regions.png)
+
+---
+
+### Accessible IC Parameter Space
+
+Green region: discriminant Δ ≥ 0 — a real initial-velocity solution exists
+at E₀ = −0.07. Red region: Δ < 0 — the IC is energetically inaccessible and
+is skipped with flag = −9999. The purple dashed line is the sample sweep
+(B = 0.25, A from 0.40 to 1.35), which lies entirely in the accessible region.
+
+![Accessible ICs](FiveBody/accessible_ics.png)
+
+---
+
+### Energy and Angular Momentum Conservation
+
+Relative errors in total energy E and angular momentum L along a single
+RK4-integrated trajectory (A = 0.90, T = 20). Both are conserved to better
+than 10⁻¹⁰ — well below the 10⁻⁵ abort threshold enforced in the C++ code.
+The shaded green band marks the "safe zone" below the abort threshold.
+
+![Energy and momentum conservation](FiveBody/energy_momentum.png)
+
+---
+
 ## Legacy Reference
 
 The original FORTRAN/MFC implementation is preserved at
