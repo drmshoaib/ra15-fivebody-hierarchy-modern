@@ -1,0 +1,40 @@
+# Build output directories (root and per-project)
+x64/
+**/x64/
+Debug/
+**/Debug/
+Release/
+**/Release/
+ipch/
+
+# Visual Studio
+*.user
+*.suo
+*.aps
+*.ncb
+*.opendb
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+.vs/
+
+# Compiled objects and libraries
+*.obj
+*.lib
+*.pdb
+*.ilk
+*.exp
+*.iobj
+*.ipdb
+
+# Build logs
+*.tlog
+*.log
+*.lastbuildstate
+
+# Executables (built by CI)
+*.exe
+
+# Generated output data
+FiveBody/data/out_*.txt
